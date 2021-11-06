@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Todo app</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script src=""></script>
+  <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,16 @@
       </div>
 
       <div class="new_todo">
-        
+        <div class="radio"></div>
+        <form onsubmit="addItem(event)">
+          <input type="text" id="todo_input" placeholder="Create a new todo...">
+        </form>
+      </div>
+      <div class="todo__list">
+        <div class="todo_item">
+          <div class="item_check"><img src="" alt=""></div>
+          <div class="text"></div>
+        </div>
       </div>
     </div>
 

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
 
-*,:before,:after {
+*,
+:before,
+:after {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -10,10 +12,10 @@
 	/*### Primary */
 
 	--bright-blue: hsl(220, 98%, 61%);
-	--check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+	--check-background: linear-gradient(120deg, rgba(87, 221, 255, 1) 35%, rgba(192, 88, 243, 1) 100%);
 
 	/* ### Neutral */
-
+	--white: #fff;
 	/* ### Light Theme */
 
 	--very-light-gray: hsl(0, 0%, 98%);
@@ -29,8 +31,7 @@
 	--light-grayish-blue: hsl(234, 39%, 85%);
 	--light-grayish-blue-hover: hsl(236, 33%, 92%);
 	--dark-grayish-blue: hsl(234, 11%, 52%);
-	--very-dark-grayish-blue: hsl(233, 14%, 35%);
-	--very-dark-grayish-blue: hsl(237, 14%, 26%);
+	--very-dark-grayish-blue2: hsl(237, 14%, 26%);
 }
 
 html {
@@ -64,19 +65,53 @@ body {
 	max-width: 670px;
 	margin: 0px auto;
 	margin-top: 100px;
- }
- 
- .header {
+}
+
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
- }
-
- .header h1  {
-	color: #fff;
-	font-size: 2.5rem;
 }
 
+.header h1 {
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+.new_todo {
+	display: flex;
+	background: var(--very-dark-desaturated-blue);
+	border-radius: .3rem;
+	height: 70px;
+	margin-top: 3rem;
+}
+
+.new_todo .radio {
+	margin: auto 15px;
+	height: 30px;
+	width: 30px;
+	border: 2px solid var(--very-dark-grayish-blue);
+	border-radius: 5rem;
+}
+
+.new_todo .radio:hover {
+	background: var(--check-background);
+}
+
+.new_todo form {
+	flex: 1;
+	margin: auto 0;
+}
+
+.new_todo input {
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	color: var(--white);
+}
 
 .bg-color {
 	position: absolute;
