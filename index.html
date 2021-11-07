@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Todo app</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -25,57 +24,65 @@
       </div>
 
       <div class="new_todo">
-        <div class="radio"></div>
-        <form onsubmit="addItem(event)">
-          <input type="text" id="todo_input" placeholder="Create a new todo...">
-        </form>
+        <div class="radio" onclick="addItem()"></div>
+        <input id="todo_input" type="text" placeholder="Create a new todo..." autocomplete="off">
       </div>
-      <div class="todo__list">
-        <div class="todo_item">
-          <div class="radio"><img src="./images/icon-check.svg" alt=""></div>
+
+      <ul id="todo__list">
+        <li class="todo_item">
+          <div class="radio"><img src="" alt=""></div>
           <div class="text">
-            Нуф
+            <span>Jog around the park</span>
           </div>
-        </div>
-        <div class="todo_item">
-          <div class="radio"><img src="./images/icon-check.svg" alt=""></div>
+          <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
+        </li>
+        <li class="todo_item">
+          <div class="radio"></div>
           <div class="text">
-            Нуф
+            <span>Make a hw</span>
           </div>
-        </div>
-        <div class="todo_item">
-          <div class="radio"><img src="./images/icon-check.svg" alt=""></div>
+          <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
+        </li>
+        <li class="todo_item">
+          <div class="radio"><img src="" alt=""></div>
           <div class="text">
-            Нуф
+            <span>Buy some staff</span>
           </div>
-        </div>
-        <div class="todo_item">
-          <div class="radio"><img src="./images/icon-check.svg" alt=""></div>
+          <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
+        </li>
+        <li class="todo_item">
+          <div class="radio"><img src="" alt=""></div>
           <div class="text">
-            Нуф
+            <span>Make a dev project</span>
           </div>
+          <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
+        </li>
+      </ul>
+
+      <div class="info">
+        <div class="item_left">
+          <p>4</p> items left
         </div>
-        <div class="items_info">
-          <div class="item_left">
-            5 items left
-          </div>
-          <div class="item_status">
-            <span class="active">All</span>
-            <span>Active</span>
-            <span>Completed</span>
-          </div>
-          <div class="clear_items">
-            <span>Clear</span>
-            <span>Completed</span>
-          </div>
+        <div class="item_filter">
+          <span class="active">All</span>
+          <span>Active</span>
+          <span>Completed</span>
+        </div>
+        <div class="item_clear">
+          <span>Clear Completed</span>
         </div>
       </div>
+
+      <div class="brief">
+        Drag and drop to reorder list
+      </div>
+
     </div>
 
   </div>
 
-  <div class="bg-color"></div>
-  </div>
+  <script src="./js/script.js"></script>
+
 </body>
 
 </html>
