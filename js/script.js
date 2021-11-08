@@ -12,7 +12,7 @@ function addItem() {
                <div class="text">
                     ${todo_input.value}
                </div>
-               <div class="remove"><img src="./images/icon-cross.svg" alt=""></div>
+               <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
           `;
 
           todo__list.append(item);
