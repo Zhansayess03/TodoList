@@ -18,8 +18,8 @@
     <div class="container">
       <div class="header">
         <h1>TODO</h1>
-        <div class="theme">
-          <img src="./images/icon-sun.svg">
+        <div class="theme" onclick="nightTheme()">
+          <img id = "themeID" src="./images/icon-sun.svg">
         </div>
       </div>
 
@@ -30,28 +30,28 @@
 
       <ul id="todo__list">
         <li class="todo_item">
-          <div class="radio"><img src="" alt=""></div>
+          <div class="radio" onclick="completed(this)"></div>
           <div class="text">
             <span>Jog around the park</span>
           </div>
           <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
         </li>
         <li class="todo_item">
-          <div class="radio"></div>
+          <div class="radio" onclick="completed(this)"></div>
           <div class="text">
             <span>Make a hw</span>
           </div>
           <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
         </li>
         <li class="todo_item">
-          <div class="radio"><img src="" alt=""></div>
+          <div class="radio" onclick="completed(this)"></div>
           <div class="text">
             <span>Buy some staff</span>
           </div>
           <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
         </li>
         <li class="todo_item">
-          <div class="radio"><img src="" alt=""></div>
+          <div class="radio" onclick="completed(this)"></div>
           <div class="text">
             <span>Make a dev project</span>
           </div>
@@ -64,11 +64,11 @@
           <p>4</p> items left
         </div>
         <div class="item_filter">
-          <span class="active">All</span>
-          <span>Active</span>
-          <span>Completed</span>
+          <span class="active" onclick="allItems()">All</span>
+          <span onclick="activeItems()">Active</span>
+          <span onclick="completedItems()">Completed</span>
         </div>
-        <div class="item_clear">
+        <div class="item_clear" onclick="clearCompleted()">
           <span>Clear Completed</span>
         </div>
       </div>

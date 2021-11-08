@@ -8,9 +8,9 @@ function addItem() {
           item.classList.add('todo_item');
 
           item.innerHTML = `
-               <div class="radio"><img src="" alt=""></div>
+               <div class="radio" onclick="completed(this)"></div>
                <div class="text">
-                    ${todo_input.value}
+                    <span>${todo_input.value}</span>
                </div>
                <div class="remove" onclick="removeParentItem(this);"><img src="./images/icon-cross.svg" alt=""></div>
           `;
@@ -38,5 +38,29 @@ function removeParentItem(e) {
      e.parentElement.remove();
      updateItems(-1);
 }
+
+function completed(e) {
+     if (e.classList.contains('completed')) {
+          e.style.background = '';
+          e.innerHTML = '';
+          e.classList.remove('completed');
+     } else {
+          e.classList.add('completed');
+          e.innerHTML = `<img src="./images/icon-check.svg" alt="check">`;
+          e.style.background = 'linear-gradient(120deg, rgba(87, 221, 255, 1) 35%, rgba(192, 88, 243, 1) 100%)';
+          const text = document.querySelector('.text span').closest('.radio');
+     }
+}
+
+function clearCompleted() {
+     const elements = document.getElementsByClassName('completed');
+     for (let i = 0; i < elements.length; i++) {
+          elements[i].parentElement.remove('todo_item');
+     }
+     updateItems(-1);
+}
+
+
+
 
 

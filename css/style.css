@@ -184,6 +184,12 @@ input::placeholder {
 	padding: 0 3px;
 }
 
+.completed + .text span {
+	text-decoration: line-through;
+	color: var(--dark-grayish-blue);
+	text-decoration-thickness: 0.05rem;
+}
+
 .info span:not(.active):hover  {
 	color: var(--white);
 	cursor: pointer;
@@ -202,4 +208,3 @@ p {
 	text-align: center;
 	color: var(--very-light-gray);
 }
-
