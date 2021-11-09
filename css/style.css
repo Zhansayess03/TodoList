@@ -44,6 +44,37 @@ body {
 	background-color: var(--very-dark-blue);
 }
 
+.night_theme {
+  background: var(--very-dark-blue);
+}
+
+.night_theme .new_todo  {
+  background: hsl(235, 24%, 19%);
+} 
+
+.night_theme .todo_item {
+  background: hsl(235, 24%, 19%);
+}
+
+.light_theme {
+  background: var(--very-light-gray);
+}
+
+
+.light_theme .new_todo  {
+  background: hsl(236, 33%, 98%);
+  color:hsl(235, 21%, 11%);
+} 
+
+.light_theme .todo_item {
+  background: hsl(236, 33%, 98%);
+  color: hsl(235, 21%, 11%);
+  border: 1px solid hsl(235, 21%, 11%);
+}
+
+.light_theme .brief {
+  color: hsl(235, 21%, 11%);
+}
 .wrapper {
 	width: 100%;
 }
