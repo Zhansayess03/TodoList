@@ -25,6 +25,24 @@ function addItem() {
      }
 }
 
+function nightTheme() {
+     if (document.querySelector('body').classList.contains('night_theme')) {
+          document.querySelector('body').classList.remove('night_theme');
+          document.querySelector('body').classList.add('light_theme');
+          document.querySelector('#themeID').src = "./images/icon-moon.svg";
+          document.querySelector('.bg_img img').src = "./images/bg-desktop-light.jpg";
+     } else {
+          document.querySelector('body').classList.add('night_theme');
+          document.querySelector('body').classList.remove('light_theme');
+          document.querySelector('#themeID').src = "./images/icon-sun.svg";
+          document.querySelector('.bg_img img').src = "./images/bg-desktop-dark.jpg";
+     }
+}
+
+
+
+
+
 const todoList = document.querySelector('#todo__list');
 
 
